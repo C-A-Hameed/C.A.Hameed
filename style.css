@@ -44,13 +44,17 @@ html {
   filter: grayscale(0.5);
   border: 2px solid #212529;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-  transition: filter 0.3s, box-shadow 0.3s;
+  transition: filter 0.3s, box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  transform: scale(1);
 }
 
 .img:hover {
   filter: grayscale(0);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1) rotate(5deg);
+  border-color: #007bff;
 }
+
 
 /* Profile section */
 .pro {
@@ -204,7 +208,8 @@ html {
 .card-img-top {
   border-radius: 5px;
   width: 100%; /* Make image responsive */
-  height: auto; /* Maintain aspect ratio */
+  /* height: auto; Maintain aspect ratio */
+  aspect-ratio: 6/3;
 }
 
 .card:hover {
